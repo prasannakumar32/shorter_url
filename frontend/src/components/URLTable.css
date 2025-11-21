@@ -1,0 +1,308 @@
+.url-table {
+  margin-top: 30px;
+}
+
+.url-table h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.url-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.url-table th {
+  background: #f8f9fa;
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+/* Column-specific widths */
+.url-table th:nth-child(1) { /* Long URL */
+  width: 35%;
+  min-width: 300px;
+}
+
+.url-table th:nth-child(2) { /* Custom Code */
+  width: 12%;
+  min-width: 100px;
+  text-align: center;
+}
+
+.url-table th:nth-child(3) { /* Shortened URL */
+  width: 28%;
+  min-width: 250px;
+}
+
+.url-table th:nth-child(4) { /* Clicks */
+  width: 8%;
+  min-width: 80px;
+  text-align: center;
+}
+
+.url-table th:nth-child(5) { /* Created */
+  width: 10%;
+  min-width: 100px;
+}
+
+.url-table th:nth-child(6) { /* Last Clicked */
+  width: 10%;
+  min-width: 100px;
+}
+
+.url-table th:nth-child(7) { /* Actions */
+  width: 7%;
+  min-width: 120px;
+  text-align: center;
+}
+
+.url-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+.url-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.url-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Column-specific cell styles */
+.url-table td:nth-child(2) { /* Custom Code */
+  text-align: center;
+}
+
+.url-table td:nth-child(4) { /* Clicks */
+  text-align: center;
+}
+
+.url-table td:nth-child(7) { /* Actions */
+  text-align: center;
+}
+
+/* Structured field displays */
+.url-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.code-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.url-link {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-all;
+  flex: 1;
+  min-width: 0;
+}
+
+.url-link:hover {
+  text-decoration: underline;
+}
+
+.code-text {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #495057;
+  background: #e9ecef;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.copy-small-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.copy-small-btn:hover {
+  background: #545b62;
+  transform: scale(1.1);
+}
+
+.long-url a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.long-url a:hover {
+  text-decoration: underline;
+}
+
+.short-url-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  text-align: left;
+  word-break: break-all;
+  flex: 1;
+  min-width: 0;
+}
+
+.short-url-btn:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.short-url-btn:disabled {
+  color: #6c757d;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.clicks {
+  font-weight: 600;
+  color: #28a745;
+  text-align: center;
+}
+
+.created,
+.last-clicked {
+  color: #6c757d;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.actions {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.actions button,
+.actions a.stats-btn {
+  margin: 0 2px;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.copy-btn {
+  background: #28a745;
+  color: white;
+}
+
+.copy-btn:hover:not(:disabled) {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+.stats-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.stats-btn:hover {
+  background: #138496;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+.actions button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.url-table-empty {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+  font-style: italic;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .url-table th,
+  .url-table td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .url-table th:nth-child(1) { /* Long URL */
+    min-width: 200px;
+  }
+
+  .url-table th:nth-child(2) { /* Custom Code */
+    min-width: 80px;
+  }
+
+  .url-table th:nth-child(3) { /* Shortened URL */
+    min-width: 180px;
+  }
+  
+  .actions button,
+  .actions a.stats-btn {
+    padding: 4px 6px;
+    font-size: 0.8rem;
+    margin: 0 1px;
+  }
+
+  .url-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .code-display {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .copy-small-btn {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,94 @@
+.stats {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stats-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats h2 {
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.stats-loading,
+.stats-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.stats-error {
+  color: #dc3545;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+}
+
+.stats-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.stats-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.stats-item:last-child {
+  border-bottom: none;
+}
+
+.stats-item label {
+  font-weight: 600;
+  color: #495057;
+  margin-right: 15px;
+}
+
+.stats-value {
+  flex: 1;
+  text-align: right;
+  color: #212529;
+  word-break: break-all;
+}
+
+.stats-value.click-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.stats-value a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.stats-value a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
