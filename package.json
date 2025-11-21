@@ -9,18 +9,17 @@
     "client": "cd frontend && npm start",
     "backend": "cd backend && npm run dev",
     "frontend": "cd frontend && npm start",
-    "build": "cd frontend && npm run build && cd ../backend && npm install",
-    "build-backend": "cd backend && npm run build",
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "install-deps": "npm install && npm run install-all",
+    "build": "npm install && npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "build:backend": "cd backend && npm install",
     "heroku-postbuild": "npm run build"
   },
   "keywords": ["url-shortener", "bitly", "express", "react", "nodejs", "postgresql", "typescript"],
   "author": "",
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "node": "18.x",
+    "npm": "9.x"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
