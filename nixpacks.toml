@@ -6,13 +6,14 @@ node = "18"
 
 [phases.install]
 cmds = [
+    "npm install",
     "cd frontend && npm install --legacy-peer-deps",
-    "cd ../backend && npm install --legacy-peer-deps"
+    "cd ../backend && npm install"
 ]
 
 [phases.build]
 cmds = [
-    "cd frontend && npm run build",
+    "cd frontend && npm install react-scripts && npm run build",
     "cd ../backend && npm run build"
 ]
 
